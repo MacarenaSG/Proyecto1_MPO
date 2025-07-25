@@ -1,5 +1,6 @@
 
 import json
+import time
 
 nombre = input("\nIntroduce tu nombre:").strip().title()
 print(f"\nBienvenid@ al juego {nombre}, ¡Empezamos!")
@@ -35,6 +36,30 @@ def mostrar_resultados(aciertos, total):
         print("Necesitas practicar.")
 
 
+def guardar_resultado(nombre, aciertos, total):
+    porcentaje = (aciertos / total) * 100
+    with open("resultados.txt", "a", encoding="utf-8") as archivo:
+        archivo.write(f"{nombre} - Aciertos: {aciertos}/{total} - {porcentaje:.2f}%\n")
+
+def obtener_respuesta():
+    tiempo_limite = 10  # segundos
+    print("TIENES 10 SEGUNDOS PARA RESPONDER")
+    inicio = time.time()
+
+    while True:
+        respuesta = input("Tu respuesta (A/B/C/D): ").strip().upper()
+        tiempo_transcurrido = time.time() - inicio
+
+        if tiempo_transcurrido > tiempo_limite:
+            print("\n¡Tiempo agotado!")
+            return None
+
+        if respuesta in ['A', 'B', 'C', 'D']:
+            return respuesta
+        else:
+            print("Respuesta no válida. Introduzca (A,B,C o D)")
+
+
 def empezar_cuestionario():
     preguntas = cargar_preguntas()
     aciertos = 0
@@ -42,6 +67,9 @@ def empezar_cuestionario():
     for i, pregunta in enumerate(preguntas, 1):
         mostrar_pregunta(pregunta, i)
         respuesta = obtener_respuesta()
+        if respuesta is None:
+            print("Respuesta no registrada por falta de tiempo.\n")
+            continue
         if corregir_respuesta(respuesta, pregunta["respuesta_correcta"]):
             print("Correcto!\n")
             aciertos += 1
@@ -53,18 +81,12 @@ def empezar_cuestionario():
 
     guardar_resultado(nombre, aciertos, len(preguntas))
 
-def obtener_respuesta():
-    respuesta = input("Tu respuesta (A/B/C/D): ").upper()
-    while respuesta not in ['A', 'B', 'C', 'D']:
-        respuesta = input("Por favor, introduce una opción válida (A/B/C/D): ").upper()
-    return respuesta
-
 
 def mostrar_menu():
     while True:
         print("\n### MENÚ ###")
         print("1 - Empezar cuestionario")
-        print("2 - Ranking (opcional)")
+        print("2 - Ranking")
         print("3 - Salir")
 
         opcion = input("Selecciona una opción: ")
@@ -72,18 +94,13 @@ def mostrar_menu():
         if opcion == "1":
             empezar_cuestionario()
         elif opcion == "2":
-            print("Ranking aún no implementado.")
+            mostrar_ranking()
         elif opcion == "3":
             print("Gracias por jugar con nosotros. ¡Hasta la próxima!")
             break
         else:
             print("Opción no válida. Intenta de nuevo.")
 
-
-def guardar_resultado(nombre, aciertos, total):
-    porcentaje = (aciertos / total) * 100
-    with open("resultados.txt", "a", encoding="utf-8") as archivo:
-        archivo.write(f"{nombre} - Aciertos: {aciertos}/{total} - {porcentaje:.2f}%\n")
 
 mostrar_menu()
 
