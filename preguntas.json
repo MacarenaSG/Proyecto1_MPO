@@ -1,0 +1,52 @@
+[
+    {
+        "pregunta": "¿Qué tipo de lenguaje es Python?",
+        "opciones": ["A. Compilado", "B. Interpretado", "C. Ensamblador", "D. Binario"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cómo se escribe un comentario de una sola línea en Python?",
+        "opciones": ["A. // comentario", "B. <!-- comentario -->", "C. # comentario", "D. /* comentario */"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál es la función para mostrar datos por pantalla?",
+        "opciones": ["A. display()", "B. write()", "C. show()", "D. print()"],
+        "respuesta_correcta": "D"
+    },
+    {
+        "pregunta": "¿Qué tipo de dato se obtiene con input()?",
+        "opciones": ["A. Entero", "B. Booleano", "C. Cadena (string)", "D. Flotante"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Cuál de las siguientes es una estructura de control condicional?",
+        "opciones": ["A. for", "B. def", "C. if", "D. while"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Qué operador se usa para comparar igualdad?",
+        "opciones": ["A. =", "B. ==", "C. !=", "D. <>"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Cuál de estas estructuras es una lista en Python?",
+        "opciones": ["A. {1, 2, 3}", "B. (1, 2, 3)", "C. [1, 2, 3]", "D. <1, 2, 3>"],
+        "respuesta_correcta": "C"
+    },
+    {
+        "pregunta": "¿Qué palabra clave se usa para definir una función?",
+        "opciones": ["A. function", "B. define", "C. func", "D. def"],
+        "respuesta_correcta": "D"
+    },
+    {
+        "pregunta": "¿Qué imprime el código: print(2 + 3 * 4)?",
+        "opciones": ["A. 20", "B. 14", "C. 24", "D. 18"],
+        "respuesta_correcta": "B"
+    },
+    {
+        "pregunta": "¿Qué significa len('Python')?",
+        "opciones": ["A. Número de líneas de código", "B. Longitud de la palabra 'Python'", "C. Último carácter", "D. Tamaño en bytes"],
+        "respuesta_correcta": "B"
+    }
+]
