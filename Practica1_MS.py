@@ -1,6 +1,6 @@
 
-import json
-import time
+import json #importar las preguntas generadas en el archivo .json
+import time #importar el tiempo en las preguntas.
 
 nombre = input("\nIntroduce tu nombre:").strip().title()
 print(f"\nBienvenid@ al juego {nombre}, ¡Empezamos!")
@@ -81,6 +81,18 @@ def empezar_cuestionario():
 
     guardar_resultado(nombre, aciertos, len(preguntas))
 
+def mostrar_ranking():
+    print("\n--- RANKING DE RESULTADOS ---")
+    try:
+        with open("resultados.txt", "r", encoding="utf-8") as archivo:
+            contenido = archivo.read()
+            if contenido.strip():
+                print(contenido)
+            else:
+                print("Aún no hay resultados guardados.")
+    except FileNotFoundError: #mesaje si el archivo aun no se ha creado. Se deja para que no de error el programa.
+        print("Aún no se ha creado el archivo de resultados.")
+    input("\nPresiona Enter para volver al menú...")
 
 def mostrar_menu():
     while True:
