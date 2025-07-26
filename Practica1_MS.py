@@ -3,7 +3,21 @@ import json #importar las preguntas generadas en el archivo .json
 import time #importar el tiempo en las preguntas.
 
 nombre = input("\nIntroduce tu nombre:").strip().title()
-print(f"\nBienvenid@ al juego {nombre}, ¡Empezamos!")
+print(f"\nBienvenid@ al juego de Python {nombre}, ¡Empezamos!")
+
+def elegir_nivel():
+    print("\nElige un nivel de juego:")
+    print("1-Fácil")
+    print("2-Medio")
+
+
+    opciones = {"1": "fácil", "2": "medio"}
+    eleccion = input("Selecciona una opción (1 o 2): ")
+
+    while eleccion not in opciones:
+        eleccion = input("Opción incorrecta. Elige 1 o 2: ")
+
+    return opciones[eleccion]
 
 
 def cargar_preguntas():
@@ -60,8 +74,15 @@ def obtener_respuesta():
             print("Respuesta no válida. Introduzca (A,B,C o D)")
 
 
-def empezar_cuestionario():
-    preguntas = cargar_preguntas()
+def empezar_cuestionario(dificultad):
+    total_preguntas = cargar_preguntas()
+
+    preguntas = [p for p in total_preguntas if p.get("dificultad") == dificultad]
+
+    if not preguntas:
+        print(f"No hay preguntas disponibles para el nivel '{dificultad}'.")
+        return
+
     aciertos = 0
 
     for i, pregunta in enumerate(preguntas, 1):
@@ -104,7 +125,8 @@ def mostrar_menu():
         opcion = input("Selecciona una opción: ")
 
         if opcion == "1":
-            empezar_cuestionario()
+            nivel = elegir_nivel()
+            empezar_cuestionario(nivel)
         elif opcion == "2":
             mostrar_ranking()
         elif opcion == "3":
@@ -115,6 +137,7 @@ def mostrar_menu():
 
 
 mostrar_menu()
+
 
 
 

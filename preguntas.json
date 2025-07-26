@@ -2,51 +2,142 @@
     {
         "pregunta": "¿Qué tipo de lenguaje es Python?",
         "opciones": ["A. Compilado", "B. Interpretado", "C. Ensamblador", "D. Binario"],
-        "respuesta_correcta": "B"
+        "respuesta_correcta": "B",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Cómo se escribe un comentario de una sola línea en Python?",
         "opciones": ["A. // comentario", "B. <!-- comentario -->", "C. # comentario", "D. /* comentario */"],
-        "respuesta_correcta": "C"
+        "respuesta_correcta": "C",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Cuál es la función para mostrar datos por pantalla?",
         "opciones": ["A. display()", "B. write()", "C. show()", "D. print()"],
-        "respuesta_correcta": "D"
+        "respuesta_correcta": "D",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Qué tipo de dato se obtiene con input()?",
         "opciones": ["A. Entero", "B. Booleano", "C. Cadena (string)", "D. Flotante"],
-        "respuesta_correcta": "C"
+        "respuesta_correcta": "C",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Cuál de las siguientes es una estructura de control condicional?",
         "opciones": ["A. for", "B. def", "C. if", "D. while"],
-        "respuesta_correcta": "C"
+        "respuesta_correcta": "C",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Qué operador se usa para comparar igualdad?",
         "opciones": ["A. =", "B. ==", "C. !=", "D. <>"],
-        "respuesta_correcta": "B"
+        "respuesta_correcta": "B",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Cuál de estas estructuras es una lista en Python?",
         "opciones": ["A. {1, 2, 3}", "B. (1, 2, 3)", "C. [1, 2, 3]", "D. <1, 2, 3>"],
-        "respuesta_correcta": "C"
+        "respuesta_correcta": "C",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Qué palabra clave se usa para definir una función?",
         "opciones": ["A. function", "B. define", "C. func", "D. def"],
-        "respuesta_correcta": "D"
+        "respuesta_correcta": "D",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Qué imprime el código: print(2 + 3 * 4)?",
         "opciones": ["A. 20", "B. 14", "C. 24", "D. 18"],
-        "respuesta_correcta": "B"
+        "respuesta_correcta": "B",
+        "dificultad": "fácil"
     },
     {
         "pregunta": "¿Qué significa len('Python')?",
         "opciones": ["A. Número de líneas de código", "B. Longitud de la palabra 'Python'", "C. Último carácter", "D. Tamaño en bytes"],
-        "respuesta_correcta": "B"
+        "respuesta_correcta": "B",
+        "dificultad": "fácil"
+    },
+    {
+        "pregunta": "¿Cuál es la diferencia entre una lista y una tupla?",
+        "opciones": [
+            "A. Las listas son mutables y las tuplas no",
+            "B. Las tuplas son más lentas",
+            "C. Las listas usan paréntesis y las tuplas corchetes",
+            "D. No hay diferencia"
+        ],
+        "respuesta_correcta": "A",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Qué hace el método 'append()' en una lista?",
+        "opciones": ["A. Elimina un elemento", "B. Ordena la lista", "C. Agrega un elemento al final", "D. Inserta al principio"],
+        "respuesta_correcta": "C",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Cuál es la salida de print(len({'a': 1, 'b': 2}))?",
+        "opciones": ["A. 1", "B. 2", "C. 0", "D. Error"],
+        "respuesta_correcta": "B",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Cuál es la palabra clave para manejar excepciones?",
+        "opciones": ["A. handle", "B. except", "C. error", "D. catch"],
+        "respuesta_correcta": "B",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Qué tipo de error es 'IndexError'?",
+        "opciones": [
+            "A. Acceso fuera del rango de una lista",
+            "B. Variable no definida",
+            "C. Archivo no encontrado",
+            "D. División por cero"
+        ],
+        "respuesta_correcta": "A",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Qué estructura se usa para ejecutar código repetidamente mientras una condición sea verdadera?",
+        "opciones": ["A. if", "B. for", "C. while", "D. def"],
+        "respuesta_correcta": "C",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Qué valor devuelve una función si no hay 'return'?",
+        "opciones": ["A. True", "B. 0", "C. None", "D. Error"
+        ],
+        "respuesta_correcta": "C",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Cómo defines una función en Python?",
+        "opciones": [
+            "A. function miFuncion()",
+            "B. def miFuncion():",
+            "C. define miFuncion():",
+            "D. fun miFuncion()"
+        ],
+        "respuesta_correcta": "B",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Qué operador se usa para la potencia?",
+        "opciones": ["A. ^", "B. pow", "C. **", "D. //"],
+        "respuesta_correcta": "C",
+        "dificultad": "medio"
+    },
+    {
+        "pregunta": "¿Cuál es la salida de print(3 == '3')?",
+        "opciones": ["A. True", "B. False", "C. Error", "D. None"],
+        "respuesta_correcta": "B",
+        "dificultad": "medio"
     }
-]
+    ]
+
+
+
+
+
